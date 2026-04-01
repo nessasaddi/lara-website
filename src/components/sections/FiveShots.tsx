@@ -44,7 +44,7 @@ export default function FiveShots() {
       <div className="mx-auto max-w-7xl px-6 md:px-12 lg:px-16">
         <FadeIn>
           <p
-            className="mb-4 font-[family-name:var(--font-body)] text-xs font-medium uppercase tracking-[0.15em]"
+            className="mb-4 text-center font-[family-name:var(--font-body)] text-xs font-medium uppercase tracking-[0.15em]"
             style={{ color: "var(--accent-primary)" }}
           >
             The Approach
@@ -52,37 +52,31 @@ export default function FiveShots() {
         </FadeIn>
         <FadeIn delay={0.1}>
           <h2
-            className="mb-16 font-[family-name:var(--font-display)] text-3xl font-light md:text-[40px]"
+            className="mb-16 text-center font-[family-name:var(--font-display)] text-3xl font-light md:text-[40px]"
             style={{ color: "var(--content-primary)" }}
           >
             Five frames that tell your full story.
           </h2>
         </FadeIn>
 
-        {/* Horizontal scroll on mobile, 5-col grid on desktop */}
-        <div className="flex gap-5 overflow-x-auto pb-4 md:grid md:grid-cols-5 md:overflow-visible md:pb-0 snap-x snap-mandatory">
+        <div className="space-y-0">
           {shots.map((shot, i) => (
-            <FadeIn key={shot.number} delay={i * 0.1} className="shrink-0 w-[72%] sm:w-[48%] md:w-auto snap-start">
-              <article
-                className="relative overflow-hidden p-6 h-full"
+            <FadeIn key={shot.number} delay={i * 0.08}>
+              <div
+                className="flex items-baseline gap-6 py-6 md:py-8"
                 style={{
-                  backgroundColor: "var(--surface-raised)",
-                  boxShadow: "var(--shadow-subtle)",
-                  borderRadius: "var(--radius-md)",
-                  borderTop: "2px solid var(--accent-primary)",
+                  borderBottom: "1px solid var(--accent-blush)",
                 }}
               >
-                {/* Watermark number */}
                 <span
-                  className="absolute -top-2 -right-1 font-[family-name:var(--font-display)] text-[80px] font-light leading-none select-none"
-                  style={{ color: "var(--accent-blush)", opacity: 0.3 }}
+                  className="font-[family-name:var(--font-body)] text-xs font-medium tracking-wider"
+                  style={{ color: "var(--accent-primary)" }}
                 >
                   {shot.number}
                 </span>
-
-                <div className="relative">
+                <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:gap-8">
                   <h3
-                    className="mb-3 font-[family-name:var(--font-display)] text-xl font-semibold"
+                    className="font-[family-name:var(--font-display)] text-lg font-medium shrink-0 md:w-56"
                     style={{ color: "var(--content-primary)" }}
                   >
                     {shot.title}
@@ -94,7 +88,7 @@ export default function FiveShots() {
                     {shot.description}
                   </p>
                 </div>
-              </article>
+              </div>
             </FadeIn>
           ))}
         </div>

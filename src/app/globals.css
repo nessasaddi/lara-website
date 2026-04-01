@@ -56,16 +56,17 @@
 }
 
 @theme inline {
-  --font-display: var(--font-display);
+  --font-display: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   --font-body: var(--font-body);
 }
 
 html {
   scroll-behavior: smooth;
+  text-wrap: balance;
 }
 
 body {
-  font-family: var(--font-body), serif;
+  font-family: var(--font-body), sans-serif;
   background-color: var(--surface-base);
   color: var(--content-primary);
   -webkit-font-smoothing: antialiased;

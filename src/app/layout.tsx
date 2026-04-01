@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { cormorantGaramond, plusJakartaSans } from "@/lib/fonts";
+import { dmSans } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorantGaramond.variable} ${plusJakartaSans.variable} antialiased`}
+      className={`${dmSans.variable} antialiased`}
     >
       <body className="min-h-screen">
         <div className="grain-overlay" aria-hidden="true" />

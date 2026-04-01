@@ -77,8 +77,8 @@ function ServiceTier({
                 </span>
               )}
               <h3
-                className="font-[family-name:var(--font-display)] text-[28px] font-semibold leading-snug"
-                style={{ color: "var(--content-primary)" }}
+                className="font-[family-name:var(--font-display)] text-[15px] font-semibold leading-snug uppercase"
+                style={{ color: "var(--content-primary)", letterSpacing: "2px" }}
               >
                 {title}
               </h3>
@@ -96,7 +96,7 @@ function ServiceTier({
               </p>
             </div>
             <span
-              className="mt-2 shrink-0 text-2xl font-light transition-transform"
+              className="mt-2 shrink-0 text-4xl font-bold transition-transform"
               style={{
                 color: "var(--accent-primary)",
                 transform: open ? "rotate(45deg)" : "rotate(0deg)",
@@ -258,35 +258,6 @@ export default function Services() {
         cta="Let's build your content strategy →"
       />
 
-      {/* Add-on callout */}
-      <div className="py-12" style={{ backgroundColor: "var(--surface-sunken)" }}>
-        <div className="mx-auto max-w-3xl px-6 md:px-12 lg:px-0">
-          <FadeIn>
-            <div
-              className="rounded-xl p-8"
-              style={{
-                backgroundColor: "var(--surface-raised)",
-                boxShadow: "var(--shadow-subtle)",
-                borderLeft: "3px solid var(--accent-primary)",
-              }}
-            >
-              <p
-                className="font-[family-name:var(--font-display)] text-lg font-semibold"
-                style={{ color: "var(--content-primary)" }}
-              >
-                Quarterly Content Partnership Bundle
-              </p>
-              <p
-                className="mt-2 font-[family-name:var(--font-body)] text-sm font-light"
-                style={{ color: "var(--content-secondary)" }}
-              >
-                3 Signature Shoots at a preferred rate for brands who want
-                consistent, high-level content all year.
-              </p>
-            </div>
-          </FadeIn>
-        </div>
-      </div>
     </section>
   );
 }
