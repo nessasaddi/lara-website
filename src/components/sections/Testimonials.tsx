@@ -11,7 +11,7 @@ const testimonials = [
   },
   {
     quote:
-      "Lara didn't just take beautiful photos — she understood our brand, our clientele, and what makes us different. The content strategy she built has been the foundation of our growth this year.",
+      "Lara didn&apos;t just take beautiful photos — she understood our brand, our clientele, and what makes us different. The content strategy she built has been the foundation of our growth this year.",
     name: "Dr. Anisa Park",
     title: "Founder, Radiance Med Spa",
   },

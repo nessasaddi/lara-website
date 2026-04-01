@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import FadeIn from "@/components/ui/FadeIn";
 import Button from "@/components/ui/Button";
 
@@ -47,96 +49,116 @@ function ServiceTier({
   cta,
   sunken = false,
 }: ServiceTierProps) {
+  const [open, setOpen] = useState(false);
+
   return (
     <div
-      className="py-20 md:py-24"
+      className="py-10 md:py-12"
       style={{
         backgroundColor: sunken ? "var(--surface-sunken)" : "var(--surface-base)",
       }}
     >
       <div className="mx-auto max-w-3xl px-6 md:px-12 lg:px-0">
         <FadeIn>
-          <div className="mb-8">
-            {tag && (
-              <span
-                className="mb-4 inline-block rounded-full px-4 py-1.5 font-[family-name:var(--font-body)] text-xs font-medium tracking-wide"
-                style={{
-                  backgroundColor: "var(--accent-cream)",
-                  color: "var(--accent-primary)",
-                }}
+          <button
+            onClick={() => setOpen(!open)}
+            className="w-full text-left flex items-start justify-between gap-4"
+          >
+            <div>
+              {tag && (
+                <span
+                  className="mb-4 inline-block rounded-full px-4 py-1.5 font-[family-name:var(--font-body)] text-xs font-medium tracking-wide"
+                  style={{
+                    backgroundColor: "var(--accent-cream)",
+                    color: "var(--accent-primary)",
+                  }}
+                >
+                  {tag}
+                </span>
+              )}
+              <h3
+                className="font-[family-name:var(--font-display)] text-[28px] font-semibold leading-snug"
+                style={{ color: "var(--content-primary)" }}
               >
-                {tag}
-              </span>
-            )}
-            <h3
-              className="font-[family-name:var(--font-display)] text-[28px] font-semibold leading-snug"
-              style={{ color: "var(--content-primary)" }}
+                {title}
+              </h3>
+              <p
+                className="mt-2 font-[family-name:var(--font-body)] text-base font-light"
+                style={{ color: "var(--content-secondary)" }}
+              >
+                {subtitle}
+              </p>
+              <p
+                className="mt-3 font-[family-name:var(--font-display)] text-[32px] font-light"
+                style={{ color: "var(--accent-primary)" }}
+              >
+                {investment}
+              </p>
+            </div>
+            <span
+              className="mt-2 shrink-0 text-2xl font-light transition-transform"
+              style={{
+                color: "var(--accent-primary)",
+                transform: open ? "rotate(45deg)" : "rotate(0deg)",
+                transitionDuration: "var(--duration-normal)",
+              }}
             >
-              {title}
-            </h3>
-            <p
-              className="mt-2 font-[family-name:var(--font-body)] text-base font-light"
-              style={{ color: "var(--content-secondary)" }}
+              +
+            </span>
+          </button>
+        </FadeIn>
+
+        <AnimatePresence initial={false}>
+          {open && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+              className="overflow-hidden"
             >
-              {subtitle}
-            </p>
-          </div>
-        </FadeIn>
+              <div className="pt-8">
+                <p
+                  className="mb-8 font-[family-name:var(--font-body)] text-base font-light leading-relaxed"
+                  style={{ color: "var(--content-secondary)" }}
+                >
+                  {description}
+                </p>
 
-        <FadeIn delay={0.1}>
-          <p
-            className="mb-6 font-[family-name:var(--font-display)] text-[32px] font-light"
-            style={{ color: "var(--accent-primary)" }}
-          >
-            {investment}
-          </p>
-        </FadeIn>
+                <div className="mb-8">
+                  <p
+                    className="mb-4 font-[family-name:var(--font-body)] text-sm font-medium uppercase tracking-[0.1em]"
+                    style={{ color: "var(--content-primary)" }}
+                  >
+                    What&apos;s Included
+                  </p>
+                  <ul
+                    className="border-l-2 pl-6"
+                    style={{ borderColor: "var(--accent-primary)" }}
+                  >
+                    {includes.map((item) => (
+                      <ServiceItem key={item} text={item} />
+                    ))}
+                  </ul>
+                </div>
 
-        <FadeIn delay={0.15}>
-          <p
-            className="mb-8 font-[family-name:var(--font-body)] text-base font-light leading-relaxed"
-            style={{ color: "var(--content-secondary)" }}
-          >
-            {description}
-          </p>
-        </FadeIn>
+                <p
+                  className="mb-8 font-[family-name:var(--font-body)] text-sm font-light italic leading-relaxed"
+                  style={{ color: "var(--content-muted)" }}
+                >
+                  <span className="font-medium not-italic" style={{ color: "var(--content-secondary)" }}>
+                    Best for:
+                  </span>{" "}
+                  {bestFor}
+                </p>
 
-        <FadeIn delay={0.2}>
-          <div className="mb-8">
-            <p
-              className="mb-4 font-[family-name:var(--font-body)] text-sm font-medium uppercase tracking-[0.1em]"
-              style={{ color: "var(--content-primary)" }}
-            >
-              What&apos;s Included
-            </p>
-            <ul
-              className="border-l-2 pl-6"
-              style={{ borderColor: "var(--accent-primary)" }}
-            >
-              {includes.map((item) => (
-                <ServiceItem key={item} text={item} />
-              ))}
-            </ul>
-          </div>
-        </FadeIn>
-
-        <FadeIn delay={0.25}>
-          <p
-            className="mb-8 font-[family-name:var(--font-body)] text-sm font-light italic leading-relaxed"
-            style={{ color: "var(--content-muted)" }}
-          >
-            <span className="font-medium not-italic" style={{ color: "var(--content-secondary)" }}>
-              Best for:
-            </span>{" "}
-            {bestFor}
-          </p>
-        </FadeIn>
-
-        <FadeIn delay={0.3}>
-          <Button href="#contact" variant="secondary">
-            {cta}
-          </Button>
-        </FadeIn>
+                <Button href="#contact" variant="secondary">
+                  {cta}
+                </Button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );

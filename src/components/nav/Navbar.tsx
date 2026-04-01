@@ -36,9 +36,9 @@ export default function Navbar() {
             href="#"
             className="font-[family-name:var(--font-display)] text-xl font-semibold tracking-[0.04em]"
             style={{ color: "var(--content-primary)" }}
-            aria-label="Lara Maria — Home"
+            aria-label="In Light — Home"
           >
-            Lara Maria
+            In Light
           </a>
 
           {/* Desktop nav */}

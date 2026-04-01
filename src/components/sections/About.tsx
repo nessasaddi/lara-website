@@ -50,7 +50,7 @@ export default function About() {
                   className="font-[family-name:var(--font-body)] text-base font-light leading-relaxed"
                   style={{ color: "var(--content-secondary)" }}
                 >
-                  I&apos;m Lara Maria — a brand content strategist and
+                  I&apos;m Lara — the creative behind In Light, a brand content strategist and
                   photographer for established business owners who are ready to
                   show up at the level they&apos;re operating at. I help real
                   estate professionals, med spas, dentists, pilates studios, and
@@ -90,9 +90,9 @@ export default function About() {
                   color: "var(--accent-primary)",
                   transitionDuration: "var(--duration-fast)",
                 }}
-                aria-label="Follow Lara Maria on Instagram"
+                aria-label="Follow In Light on Instagram"
               >
-                @laramaria →
+                @inlight →
               </a>
             </FadeIn>
           </div>

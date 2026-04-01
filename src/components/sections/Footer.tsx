@@ -12,12 +12,12 @@ export default function Footer() {
           className="font-[family-name:var(--font-body)] text-xs font-light"
           style={{ color: "var(--content-muted)" }}
         >
-          &copy; 2026 Lara Maria. All rights reserved.
+          &copy; 2026 In Light. All rights reserved.
         </p>
 
         <div className="flex items-center gap-6">
           <a
-            href="https://laramaria.mypixieset.com/"
+            href="https://laramaria.mypixieset.com"
             target="_blank"
             rel="noopener noreferrer"
             className="font-[family-name:var(--font-body)] text-xs font-light transition-colors hover:text-[var(--accent-secondary)]"

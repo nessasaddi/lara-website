@@ -3,13 +3,13 @@ import { cormorantGaramond, plusJakartaSans } from "@/lib/fonts";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Lara Maria | Brand Content Strategist & Photographer",
+  title: "In Light | Brand Content Strategist & Photographer",
   description:
     "Strategic brand photography, content creation, and social media management for established businesses ready to elevate their presence with intention.",
   keywords:
-    "brand photographer, content strategist, personal brand photography, brand content, social media management, real estate photography, med spa content, brand elevation",
+    "brand photographer, content strategist, personal brand photography, brand content, social media management, real estate photography, med spa content, brand elevation, in light",
   openGraph: {
-    title: "Lara Maria | Brand Content Strategist & Photographer",
+    title: "In Light | Brand Content Strategist & Photographer",
     description: "Content that reflects who you're becoming.",
     type: "website",
   },

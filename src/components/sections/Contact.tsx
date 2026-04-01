@@ -33,7 +33,7 @@ export default function Contact() {
 
         <FadeIn delay={0.2}>
           <div className="mt-10">
-            <Button href="mailto:hello@laramaria.com" variant="inverse">
+            <Button href="mailto:hello@inlight.co" variant="inverse">
               Start the conversation
             </Button>
           </div>
@@ -46,7 +46,7 @@ export default function Contact() {
           >
             Or reach out directly —{" "}
             <a
-              href="mailto:hello@laramaria.com"
+              href="mailto:hello@inlight.co"
               className="underline underline-offset-4 decoration-1 transition-colors"
               style={{
                 color: "var(--accent-secondary)",
@@ -54,7 +54,7 @@ export default function Contact() {
                 transitionDuration: "var(--duration-fast)",
               }}
             >
-              hello@laramaria.com
+              hello@inlight.co
             </a>
           </p>
         </FadeIn>
@@ -67,7 +67,7 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="inline-block transition-opacity hover:opacity-80"
               style={{ transitionDuration: "var(--duration-fast)" }}
-              aria-label="Follow Lara Maria on Instagram"
+              aria-label="Follow In Light on Instagram"
             >
               <svg
                 width="24"
