@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  /* Surfaces — off-white heavy, minimal warmth */
-  --surface-base: #FAFAFA;
+  /* Surfaces — warm whites, sand, cream */
+  --surface-base: #FAF9F7;
   --surface-raised: #FFFFFF;
-  --surface-sunken: #F3F2F0;
-  --surface-overlay: rgba(250, 250, 250, 0.95);
-  --surface-dark: #1A1918;
+  --surface-sunken: #F5F3F0;
+  --surface-overlay: rgba(250, 249, 247, 0.95);
+  --surface-dark: #1B2A33;
 
   /* Content */
-  --content-primary: #1A1918;
-  --content-secondary: #6B6967;
-  --content-muted: #A3A09D;
-  --content-inverse: #FAFAFA;
+  --content-primary: #1B2A33;
+  --content-secondary: #5A6B73;
+  --content-muted: #8E9DA5;
+  --content-inverse: #FAF9F7;
 
-  /* Accent */
-  --accent-primary: #B9A07A;
-  --accent-secondary: #CAAF8E;
-  --accent-blush: #E0D2C3;
-  --accent-cream: #EBE4DA;
+  /* Accent — heavenly blue */
+  --accent-primary: #89B8D3;
+  --accent-secondary: #A3CCDF;
+  --accent-blush: #C9E0EC;
+  --accent-cream: #E8F2F7;
 
   /* Atmosphere */
-  --atmosphere-glow: rgba(185, 160, 122, 0.06);
-  --atmosphere-gradient: linear-gradient(180deg, #FAFAFA 0%, #F3F2F0 100%);
+  --atmosphere-glow: rgba(137, 184, 211, 0.06);
+  --atmosphere-gradient: linear-gradient(180deg, #FAF9F7 0%, #F5F3F0 100%);
 
   /* Motion */
   --duration-fast: 150ms;
@@ -52,7 +52,7 @@
   /* Shadows */
   --shadow-subtle: 0 1px 3px rgba(26, 23, 20, 0.04);
   --shadow-medium: 0 4px 20px rgba(26, 23, 20, 0.06);
-  --shadow-glow: 0 0 40px rgba(196, 169, 125, 0.12);
+  --shadow-glow: 0 0 40px rgba(137, 184, 211, 0.12);
 }
 
 @theme inline {
@@ -85,7 +85,7 @@ body {
 
 /* Placeholder images */
 .placeholder-image {
-  background: linear-gradient(135deg, #E0D6CC 0%, #CABDAE 50%, #B9A07A 100%);
+  background: linear-gradient(135deg, #E8F2F7 0%, #C9E0EC 50%, #89B8D3 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,11 +97,11 @@ body {
 }
 
 .placeholder-image-alt {
-  background: linear-gradient(225deg, #EBE4DA 0%, #E0D6CC 50%, #CABDAE 100%);
+  background: linear-gradient(225deg, #F5F0EB 0%, #E2E8E4 50%, #C9E0EC 100%);
 }
 
 .placeholder-image-warm {
-  background: linear-gradient(160deg, #CABDAE 0%, #B9A07A 40%, #E0D6CC 100%);
+  background: linear-gradient(160deg, #C9E0EC 0%, #89B8D3 40%, #E8F2F7 100%);
 }
 
 /* Selection */

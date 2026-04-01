@@ -16,10 +16,10 @@ const portfolioItems = [
 ];
 
 const gradientColors = [
-  ["#E0D6CC", "#CABDAE", "#B9A07A"],
-  ["#EBE4DA", "#E0D6CC", "#CABDAE"],
-  ["#CABDAE", "#B9A07A", "#E0D6CC"],
-  ["#E0D6CC", "#B9A07A", "#EBE4DA"],
+  ["#E8F2F7", "#C9E0EC", "#89B8D3"],
+  ["#F5F0EB", "#E2E8E4", "#C9E0EC"],
+  ["#C9E0EC", "#89B8D3", "#E8F2F7"],
+  ["#E8F2F7", "#A3CCDF", "#F5F0EB"],
 ];
 
 export default function Portfolio() {
