@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 interface ButtonProps {
   children: React.ReactNode;
   href?: string;
@@ -20,26 +22,41 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-[var(--accent-primary)] text-[var(--content-inverse)] px-10 py-4 hover:shadow-[var(--shadow-glow)] hover:scale-[1.02]",
+      "bg-[var(--accent-primary)] text-[var(--content-inverse)] px-7 py-2.5 hover:shadow-[var(--shadow-glow)] hover:scale-[1.02]",
     secondary:
       "text-[var(--accent-primary)] hover:text-[var(--content-primary)] underline underline-offset-4 decoration-[var(--accent-primary)] decoration-1",
     inverse:
-      "bg-[var(--content-inverse)] text-[var(--surface-dark)] px-10 py-4 hover:shadow-[var(--shadow-glow)] hover:scale-[1.02]",
+      "bg-[var(--content-inverse)] text-[var(--surface-dark)] px-7 py-2.5 hover:shadow-[var(--shadow-glow)] hover:scale-[1.02]",
   };
 
   const classes = `${base} ${variants[variant]} ${className}`;
 
   if (href) {
     return (
-      <a href={href} className={classes} style={{ transitionDuration: "var(--duration-normal)" }}>
+      <motion.a
+        href={href}
+        className={classes}
+        style={{ transitionDuration: "var(--duration-normal)" }}
+        whileHover={{ scale: 1.05, y: -2 }}
+        whileTap={{ scale: 0.93 }}
+        transition={{ duration: 0.18, ease: "easeOut" }}
+        onClick={onClick}
+      >
         {children}
-      </a>
+      </motion.a>
     );
   }
 
   return (
-    <button onClick={onClick} className={classes} style={{ transitionDuration: "var(--duration-normal)" }}>
+    <motion.button
+      onClick={onClick}
+      className={classes}
+      style={{ transitionDuration: "var(--duration-normal)" }}
+      whileHover={{ scale: 1.05, y: -2 }}
+      whileTap={{ scale: 0.93 }}
+      transition={{ duration: 0.18, ease: "easeOut" }}
+    >
       {children}
-    </button>
+    </motion.button>
   );
 }
