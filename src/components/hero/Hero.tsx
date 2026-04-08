@@ -15,17 +15,17 @@ export default function Hero() {
         className="mb-4 font-[family-name:var(--font-body)] text-xs font-medium uppercase tracking-[0.2em]"
         style={{ color: "var(--accent-primary)" }}
       >
-        Brand Content Strategist + Photographer
+        Brand and Content Strategy Partner
       </motion.p>
 
       <motion.h1
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="mb-6 font-[family-name:var(--font-display)] text-5xl font-light leading-[1.1] md:text-6xl lg:text-7xl"
+        className="mb-6 font-[family-name:var(--font-display)] text-3xl font-normal leading-[1.1] tracking-[0.18em] md:text-4xl lg:text-5xl"
         style={{ color: "var(--content-primary)" }}
       >
-        In Light
+        IN LIGHT COLLECTIVE
       </motion.h1>
 
       <motion.p

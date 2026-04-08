@@ -34,11 +34,23 @@ export default function Navbar() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12 lg:px-16">
           <a
             href="#"
-            className="font-[family-name:var(--font-display)] text-xl font-semibold tracking-[0.04em]"
-            style={{ color: "var(--content-primary)" }}
-            aria-label="In Light — Home"
+            aria-label="In Light Collective — Home"
           >
-            In Light
+            <svg
+              width="28"
+              height="26"
+              viewBox="0 0 28 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 23.5C14 23.5 2 15.8 2 7.5C2 4.46 4.46 2 7.5 2C9.74 2 11.67 3.3 12.62 5.18C13.1 6.12 13.52 7 14 7C14.48 7 14.9 6.12 15.38 5.18C16.33 3.3 18.26 2 20.5 2C23.54 2 26 4.46 26 7.5C26 15.8 14 23.5 14 23.5Z"
+                stroke="var(--accent-primary)"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </a>
 
           {/* Desktop nav */}
